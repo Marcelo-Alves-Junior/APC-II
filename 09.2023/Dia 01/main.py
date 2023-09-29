@@ -1,5 +1,5 @@
 import math
-'''
+
 print("1 – Faça um programa que calcula a área de um círculo, tendo como entrada o raio do mesmo.")
 print()
 pi = 3.14159265359
@@ -171,7 +171,6 @@ for i in range(alunos):
   turma.append(con)
 print(turma)
 
-'''
 
 print("17 - Uma empresa irá dar um aumento de salário aos seus funcionários de acordo com a categoria de cada empregado. \nO aumento seguirá a seguinte regra: \nFuncionários das categorias A, C, F, e H ganharão 10% de aumento sobre o salário; \nFuncionários das categorias B, D, E, I, J e T ganharão 15% de aumento sobre o salário; \nFuncionários das categorias K e R ganharão 25% de aumento sobre o salário; \nFuncionários das categorias L, M, N, O, P, Q e S ganharão 35% de aumento sobre o salário; \nFuncionários das categorias U, V, X, Y, W e Z ganharão 50% de aumento sobre o salário. \nFaça um algoritmo que mostre nome, categoria e salário reajustado de cada empregado.\n")
 
