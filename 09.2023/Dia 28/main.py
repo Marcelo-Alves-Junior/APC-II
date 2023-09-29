@@ -1,4 +1,4 @@
-print('1) Função que recebe três valores e retorna o maior valor.')
+'''1) Função que recebe três valores e retorna o maior valor.'''
 
 def maior_valor (a,b,c):
     if a > b and a > c :
@@ -9,12 +9,12 @@ def maior_valor (a,b,c):
         aux = c
     return aux
 
-print('2) Encontre o perímetro de um triângulo, dados os comprimentos de seus três lados. \nUse uma função para calcular o perímetro. \nObs.: P = a + b + c, onde a, b e c são os lados do triângulo')
+'''2) Encontre o perímetro de um triângulo, dados os comprimentos de seus três lados. Use uma função para calcular o perímetro. Obs.: P = a + b + c, onde a, b e c são os lados do triângulo')'''
 
 def perimetro (a,b,c):
     return a + b + c
 
-print('3) Crie uma função que retorna qual o conceito dada uma nota. Utilize a tabela a seguir: A >=9, B>=8, C>=7, D.=6, F<6 .')
+'''3) Crie uma função que retorna qual o conceito dada uma nota. Utilize a tabela a seguir: A >=9, B>=8, C>=7, D.=6, F<6 .'''
 
 def conceito (nota):
     if nota >= 9:
@@ -40,7 +40,7 @@ def passou (aulas,faltas,nota):
     else:
         return 0
     
-'''Crie uma função que recebe a idade de uma pessoa e imprime a sua classe eleitoral, de
+'''5) Crie uma função que recebe a idade de uma pessoa e imprime a sua classe eleitoral, de
 acordo com a tabela abaixo:'''
 
 def classe_eleitoral (idade):
