@@ -1,3 +1,4 @@
+import math
 '''1) Função que recebe três valores e retorna o maior valor.'''
 
 def maior_valor (a,b,c):
@@ -54,8 +55,7 @@ def classe_eleitoral (idade):
       
     return classe
 
-'''6) Escreva uma função que receba um número e retorne -1 se o número for ímpar ou 1
-se for par.'''
+'''6) Escreva uma função que receba um número e retorne -1 se o número for ímpar ou 1 se for par.'''
 
 def impar_par (numero):
   resto = numero % 2 # A função % retorna sempre o que restou da divisão do número, se restou 1 significa que o numero é impar.
@@ -65,13 +65,7 @@ def impar_par (numero):
     aux = 1
   return aux
 
-a = int(input('Informe um número: '))
-
-a = int(input('Informe um número')
-print(impar_par(a))
-
-'''7) Escreva uma função para calcular o fatorial de um número. Lembre que fatorial de
-número negativo não existe.'''
+'''7) Escreva uma função para calcular o fatorial de um número. Lembre que fatorial de número negativo não existe.'''
 
 def fatorial (numero):
   fat = numero # Salva o numero para executar as multiplicações
@@ -81,15 +75,37 @@ def fatorial (numero):
     i = i + 1
   return fat
 
-'''8) Séries de Taylor são vistas na disciplina de cálculo e são muito aplicáveis no campo da
-informática. Uma série de Taylor pode ser utilizada para calcular o valor de seno de um número em radianos. A série de Taylor para função seno é:'''
+'''8) Séries de Taylor são vistas na disciplina de cálculo e são muito aplicáveis no campo da informática. Uma série de Taylor pode ser utilizada para calcular o valor de seno de um número em radianos. A série de Taylor para função seno é:'''
 
-def taylor (numero):
-  i = 0
-  while i < numero:
-    elemento = ((-1)**i) / fatorial(2*i+1)
-    i = i + 1
-  return elemento
+def taylor (precisao,numero):
+  acomuladora = 0.00
+  n = 0
+  while n <= precisao:
+    elemento = (((-1)**n) / fatorial(2*n+1)) * (numero**((2*n)+1))
+    acomuladora = acomuladora + elemento
+    n = n + 1
+  return acomuladora
 
-a = int(input('Informe um numero: '))
-print(taylor(a))
+#Validando equação
+precisao = 10
+radiano = math.pi / 2
+print(taylor(precisao,radiano))
+
+'''9) O n-ésimo número de Fibonacci é definido da seguinte forma:
+f(1) = 0
+f(2) = 1
+f(3) = f(2) + f(1)
+f(n) = f(n-1) + f(n-2)
+Escreva um algoritmo para calcular e mostrar n-ésimo número de Fibonacci, onde n é
+fornecido pelo usuário. Utilize função. 0, 1, 1, 2, 3, 5, 8, 13, 21'''
+
+def fibonacci (termo):
+  if termo == 1:
+    numero = 0
+  elif termo == 2:
+    numero = 1
+  else:
+    numero = fibonacci(termo - 1) + fibonacci(termo - 2)
+  return numero
+
+print(fibonacci(7))

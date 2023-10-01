@@ -156,7 +156,8 @@ print(sorted(lista)) #comando para definir ordem crescente
 print(lista) #Imprimindo lista conforme definido na linha de lista
 
 
-print("16 - Considere que o último concurso vestibular apresentou três provas: Português, Matemática e Conhecimentos Gerais. \nConsiderando que para cada candidato tem-se um registro contendo o seu nome e as notas obtidas em cada uma das provas, \nconstrua um algoritmo que forneça:\na) o nome e as notas em cada prova do candidato\nb) a média do candidato\nc) uma informação dizendo se o candidato foi aprovado ou não.\nConsidere que um candidato é aprovado se sua média for maior que 7.0 e se não apresentou nenhuma nota abaixo de 5.0")
+#Precisa terminar 
+'''print("16 - Considere que o último concurso vestibular apresentou três provas: Português, Matemática e Conhecimentos Gerais. \nConsiderando que para cada candidato tem-se um registro contendo o seu nome e as notas obtidas em cada uma das provas, \nconstrua um algoritmo que forneça:\na) o nome e as notas em cada prova do candidato\nb) a média do candidato\nc) uma informação dizendo se o candidato foi aprovado ou não.\nConsidere que um candidato é aprovado se sua média for maior que 7.0 e se não apresentou nenhuma nota abaixo de 5.0")
 
 turma= []
 alunos = int (input("Informe a quantidade de Alunos : "))
@@ -169,48 +170,19 @@ for i in range(alunos):
   turma.append(pt)
   turma.append(mat)
   turma.append(con)
-print(turma)
+print(turma) '''
 
 
 print("17 - Uma empresa irá dar um aumento de salário aos seus funcionários de acordo com a categoria de cada empregado. \nO aumento seguirá a seguinte regra: \nFuncionários das categorias A, C, F, e H ganharão 10% de aumento sobre o salário; \nFuncionários das categorias B, D, E, I, J e T ganharão 15% de aumento sobre o salário; \nFuncionários das categorias K e R ganharão 25% de aumento sobre o salário; \nFuncionários das categorias L, M, N, O, P, Q e S ganharão 35% de aumento sobre o salário; \nFuncionários das categorias U, V, X, Y, W e Z ganharão 50% de aumento sobre o salário. \nFaça um algoritmo que mostre nome, categoria e salário reajustado de cada empregado.\n")
 
-nome = input("Informe o nome do Funcionário: ")
-salario = float (input(f"Informe o salário do Funcionário : "))
-'''
-#versão utilizando número de categoria (Não Finalizada)
-categoria = int (input(f"Informe o número da Categoria do Funcionário {nome} .\nSendo: \n1 - (A, C, F, e H) \n2- (B, D, E, I, J e T) \n3 - (K e R)\n4 - (L, M, N, O, P, Q e S) \n5 - (U, V, X, Y, W e Z) \n"))
-if categoria == 1 :
-  newsalario = salario + (salario * 0.1)
-elif categoria == 2 :
-  newsalario = salario + (salario * 0.15)
-elif categoria == 3 :
-  newsalario = salario + (salario * 0.25)
-elif categoria == 4 :
-  newsalario = salario + (salario * 0.35)
-elif categoria == 5 :
-  newsalario = salario + (salario * 0.50)
-else:
-  print("Número da Categoria informada não existe")
-
-print (f"O Funcionário {nome} recebia R${salario} e sua Categoria é ({categoria}) portanto seu novo salário é de R${newsalario}")'''
-
-'''
-#Versão utilizando operador lógico "OU" (não finalizada)
-categoria = input(f"Informe a Categoria do Funcionário : ")
-if categoria == "A" or categoria == "C" or categoria == "F" or categoria == "H" :
-  newsalario = salario + (salario * 0.1)
-elif categoria == "B" or categoria == "D" or categoria == "E" or categoria == "I" or categoria == "J" or categoria == "T" :
-  newsalario = salario + (salario * 0.15)
-else:
-  newsalario = salario + (salario * 0.3)
-'''
-
-categoria = input(f"Informe a Categoria do Funcionário : ")
 categoria1 = {'A', 'C', 'F','H'}
 categoria2 = {'B', 'D', 'E', 'I', 'J', 'T'}
 categoria3 = {'K','R'}
 categoria4 = {'L', 'M', 'N', 'O', 'P', 'Q', 'S'}
 categoria5 = {'U', 'V', 'X', 'Y', 'W', 'Z'}
+nome = input("Informe o nome do Funcionário: ")
+salario = float (input(f"Informe o salário do Funcionário : "))
+categoria = input(f"Informe a Categoria do Funcionário : ")
 texto = '\nO Funcionário {} recebia R${:.2f} e sua Categoria é ({}) portanto seu novo salário é de R${:.2f}'
 if categoria in categoria1:
   newsalario = salario + (salario * 0.1)

@@ -1,12 +1,12 @@
-'''print("1 - Faça um algoritmo que soma os números de 1 a 100 e exibe resultado da soma")
+print("1 - Faça um algoritmo que soma os números de 1 a 100 e exibe resultado da soma")
 
 i = 1
 soma = 0
 while i <=100 :
   soma = soma + i
   i = i + 1
-
 print (soma)
+
 
 print("2 - Construa um Algoritmo que, para um grupo de 50 valores inteiros, determine: \na) A soma dos números positivos; \nb) A quantidade de valores negativos\n")
 
@@ -17,8 +17,7 @@ for _ in range (5):
   if valor >=0:
     positivo = positivo + valor    
   else:
-    negativo = negativo + 1
-    
+    negativo = negativo + 1    
 print ("A soma dos positivos é {} e a quantidade de negativos é {}".format(positivo,negativo))
 
 
@@ -52,16 +51,13 @@ menor = 0
 totalsalario = 0
 qtfun = int(input("Informe a quantidade de Funcionários :"))
 for _ in range (qtfun):
-  #nome = input("Informe o nome do Funcionário :")
   salario = float (input("Informe o salario do Funcionário :"))  
   totalsalario = totalsalario + salario
   if maior < salario:
     maior = salario
   if menor > salario or menor==0:
-    menor = salario  
-
-media = totalsalario / qtfun
-  
+    menor = salario
+media = totalsalario / qtfun  
 print(media,maior,menor)
 
 print("6 - Escreva um algoritmo que determine o fatorial de um número. Para este problema, tem-se como entrada o valor do número do qual se deseja calcular o fatorial. O fatorial de 0 é igual a 1. O fatorial de um número N(N!) é definido conforme a seguir")
@@ -85,6 +81,7 @@ print (fat)
 
 
 print("7 - Sem utilizar a operação de multiplicação, escreva um programa que multiplique dois números inteiros. Por exemplo: 2 * 2 = 2 + 2.")
+
 contador = 1
 mult = 0
 n1 = int (input("Informe um número:"))
@@ -95,14 +92,16 @@ while contador <= n1 :
 print(mult)
 
 
-#ajudaprint("8 - A série de Fibonacci é formada pela sequência: 0, 1, 1, 2, 3, 5, 8, 13, 21, ... Construa um algoritmo que gere e mostre a série até o vigésimo termo.")
-anterior = 0
-atual = 1
-for _ in range(20):
-  proximo = anterior + atual
-  atual = atual + anterior
-  anterior = proximo - atual
-  print(proximo)
+print("8 - A série de Fibonacci é formada pela sequência: 0, 1, 1, 2, 3, 5, 8, 13, 21, ... Construa um algoritmo que gere e mostre a série até o vigésimo termo.")
+
+termo, ultimo = 0,0
+penultimo, i = 1,1
+while i <= 20:
+  print(termo)
+  termo = ultimo + penultimo
+  penultimo = ultimo
+  ultimo = termo
+  i = i + 1
 
 print("9 - Faça um algoritmo que leia um conjunto de números (X) e imprima sua soma (Soma) e sua média (Media). Admita que o valor 9999 é utilizado como sentinela para fim de leitura. Ex.: 1, 2, 3 => Soma=6 Media=2")
 i = 1
@@ -114,18 +113,16 @@ while i <= n1 :
   i = i + 1
 media = soma / n1
 print("A soma dos números é {:.0f} e a média dos valores é {:.2f}".format(soma,media))
-'''
-print("10 - Escrever um algoritmo que lê um valor N inteiro e positivo e que calcula e escreve o valor de E. E = 1 + 1 / 1! + 1 / 2! + 1 / 3! + 1 / N!")
+#Precisa validar o sentinela
 
-'''n = int (input("Informe um número:"))
 
-i = 1
+print("10 - Escrever um algoritmo que lê um valor N inteiro e positivo e que calcula e escreve o valor de E. E = 1 + 1 / 1! + 1 / 2! + 1 / 3! + 1 / N!") 
+
 fat = n
-e = 0
-for _ in range(n):
-  e = i 
-  while i < n:
-    fat = fat * (n - i)
-    i = i + 1
-print (fat)'''
+i = 1
+while i < n:
+  fat = fat * (n - i)
+  i = i + 1
+print (fat)
 
+#Precisa Completar
