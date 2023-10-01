@@ -117,7 +117,7 @@ print("A soma dos números é {:.0f} e a média dos valores é {:.2f}".format(so
 '''
 print("10 - Escrever um algoritmo que lê um valor N inteiro e positivo e que calcula e escreve o valor de E. E = 1 + 1 / 1! + 1 / 2! + 1 / 3! + 1 / N!")
 
-n = int (input("Informe um número:"))
+'''n = int (input("Informe um número:"))
 
 i = 1
 fat = n
@@ -127,4 +127,5 @@ for _ in range(n):
   while i < n:
     fat = fat * (n - i)
     i = i + 1
-print (fat)
+print (fat)'''
+

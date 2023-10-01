@@ -58,7 +58,7 @@ def classe_eleitoral (idade):
 se for par.'''
 
 def impar_par (numero):
-  resto = numero % 2
+  resto = numero % 2 # A função % retorna sempre o que restou da divisão do número, se restou 1 significa que o numero é impar.
   if resto > 0:
     aux = -1
   else:
@@ -73,8 +73,23 @@ print(impar_par(a))
 '''7) Escreva uma função para calcular o fatorial de um número. Lembre que fatorial de
 número negativo não existe.'''
 
-
+def fatorial (numero):
+  fat = numero # Salva o numero para executar as multiplicações
+  i = 1
+  while i < numero:
+    fat = fat * (numero - i)
+    i = i + 1
+  return fat
 
 '''8) Séries de Taylor são vistas na disciplina de cálculo e são muito aplicáveis no campo da
-informática. Uma série de Taylor pode ser utilizada para calcular o valor de seno de um
-número em radianos. A série de Taylor para função seno é:'''
+informática. Uma série de Taylor pode ser utilizada para calcular o valor de seno de um número em radianos. A série de Taylor para função seno é:'''
+
+def taylor (numero):
+  i = 0
+  while i < numero:
+    elemento = ((-1)**i) / fatorial(2*i+1)
+    i = i + 1
+  return elemento
+
+a = int(input('Informe um numero: '))
+print(taylor(a))
