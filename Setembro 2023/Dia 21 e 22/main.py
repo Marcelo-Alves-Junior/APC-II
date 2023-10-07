@@ -12,6 +12,7 @@ def tirando_media (x,y,z):
   media = (x + y + z) / 3
   return media
 
+#Executando função
 
 a = float(input("Informe o primeiro número: "))
 b = float(input("Informe o segundo número: "))
