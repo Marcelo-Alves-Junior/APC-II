@@ -1,7 +1,5 @@
 import math
 
-from Comandos.funcoes import *
-
 '''1) Função que recebe três valores e retorna o maior valor.'''
 
 def maior_valor (a,b,c):
@@ -68,7 +66,6 @@ def impar_par (numero):
     aux = 1
   return aux
 
-print(teste(10))
 
 '''7) Escreva uma função para calcular o fatorial de um número. Lembre que fatorial de número negativo não existe.'''
 
@@ -112,5 +109,3 @@ def fibonacci (termo):
   else:
     numero = fibonacci(termo - 1) + fibonacci(termo - 2)
   return numero
-
-print(fibonacci(7))

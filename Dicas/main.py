@@ -39,3 +39,4 @@
 #math.gcd(10,125)    # returna 5 
 #math.trunc(1.001)   # returna 1 
 #math.trunc(1.999)   # returna 1
+

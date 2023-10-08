@@ -1,5 +1,5 @@
 import math
-import funcoes
+import Comandos.funcoes as funcoes
 
 func = funcoes
 
@@ -167,37 +167,34 @@ elif valor1>=valor2 and valor2<valor3 :
 elif valor1<valor2 and valor2<=valor3 :
   print (valor1,valor2,valor3)
 
-#Utilizando Lista e comando Sorted:
-lista=[valor1,valor2,valor3]
-print(sorted(lista)) #comando para definir ordem crescente
-print(lista) #Imprimindo lista conforme definido na linha de lista
-
 
 # 16 - Considere que o último concurso vestibular apresentou três provas: Português, Matemática e Conhecimentos Gerais. Considerando que para cada candidato tem-se um registro contendo o seu nome e as notas obtidas em cada uma das provas, construa um algoritmo que forneça:
 # a) o nome e as notas em cada prova do candidato
 # b) a média do candidato
 # c) uma informação dizendo se o candidato foi aprovado ou não.
 # Considere que um candidato é aprovado se sua média for maior que 7.0 e se não apresentou nenhuma nota abaixo de 5.0")
+menor_nota = 0
+aprovado = 'Sim'
+nome = input("Informe o Nome do aluno: ")
+pt = float(input(f"Informe a nota de Portugues do {nome}: "))
+mat = float(input(f"Informe a nota de Matemática do {nome}: "))
+con = float(input(f"Informe a nota de Conhecimentos Gerais do {nome}: "))
 
-nome = input("Informe o Nome do Aluno: ")
-pt = input(f"Informe a nota de Portugues do {nome}: ")
-mat = input(f"Informe a nota de Matemática do {nome}: ")
-con = input(f"Informe a nota de Conhecimentos Gerais do {nome}: ")
+media = (pt + mat + con) / 3
 
-print(func.aprov(10,8))
+if pt >= mat and mat <= con:
+  menor_nota = mat
+elif pt <= con:
+  menor_nota = pt
+else:
+  menor_nota = con
 
-alunos = int (input("Informe a quantidade de Alunos : "))
-turma,nome,pt,mat,con = [],[],[],[],[]
-for i in range(alunos):
-  nome = input("Informe o Nome do Aluno: ")
-  pt = input(f"Informe a nota de Portugues do {nome}: ")
-  mat = input(f"Informe a nota de Matemática do {nome}: ")
-  con = input(f"Informe a nota de Conhecimentos Gerais do {nome}: ")
-  turma.append(nome)
-  turma.append(pt)
-  turma.append(mat)
-  turma.append(con)
-print(turma)
+if menor_nota < 5 or media < 7:
+  aprovado = 'Reprovado'
+else:
+  aprovado = 'Aprovado'
+
+print(f"O aluno {nome} tirou em Portugues {pt:,.2f} Matemática {mat:,.2f} Conhecimentos Gerais {con:,.2f} \nSua média foi {media:,.2f} , sua menor nota foi {menor_nota:,.2f} portanto ele foi {aprovado}")
 
 
 # 17 - Uma empresa irá dar um aumento de salário aos seus funcionários de acordo com a categoria de cada empregado. O aumento seguirá a seguinte regra: Funcionários das categorias A, C, F, e H ganharão 10% de aumento sobre o salário; Funcionários das categorias B, D, E, I, J e T ganharão 15% de aumento sobre o salário; \nFuncionários das categorias K e R ganharão 25% de aumento sobre o salário; \nFuncionários das categorias L, M, N, O, P, Q e S ganharão 35% de aumento sobre o salário; \nFuncionários das categorias U, V, X, Y, W e Z ganharão 50% de aumento sobre o salário. \nFaça um algoritmo que mostre nome, categoria e salário reajustado de cada empregado.\n")
@@ -228,11 +225,3 @@ elif categoria in categoria5:
   print(texto.format(nome,salario,categoria,newsalario))
 else:
   print("Categoria informada não existe")
-
-
-
-n = int (input('Tabuada de: '))
-
-print(n, 'x', 1, '=', n * 1)
-print(n, 'x', 2, '=', n * 2)
-print(n, 'x', 3, '=', n * 3)
