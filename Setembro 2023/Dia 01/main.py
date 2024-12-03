@@ -1,8 +1,4 @@
 import math
-import Comandos.funcoes as funcoes
-
-func = funcoes
-
 ##Arquivo: Lista_Aula_01
 
 # 1 – Faça um programa que calcula a área de um círculo, tendo como entrada o raio do mesmo.

@@ -1,6 +1,7 @@
 '''Questão 1) Crie um programa que peça 10 números, armazene eles em um vetor e diga qual elemento é o maior, e seu valor e a posição do vetor na qual ele foi armazenado. Para localizar o maior utilize estrutura de decisão. Utilize também uma função do Python para localizar o maior elemento
 '''
 
+
 vetor = []
 maior = 0
 posicao = 0
