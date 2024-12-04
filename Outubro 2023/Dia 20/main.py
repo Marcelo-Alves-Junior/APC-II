@@ -43,6 +43,8 @@ print(matriz)
 
 '''a) da linha 4 de M;'''
 
+
+
 '''b) da coluna 2 de M;'''
 
 '''c) da diagonal principal;
