@@ -90,7 +90,7 @@ turtle.done
 
 
 
-'''
+
 for i in ['red', 'orange' , 'black' , 'green', 'yellow', 'blue', 'purple']:
   larry.color (i)
   larry.forward(100)
@@ -102,11 +102,9 @@ for i in ['red', 'orange' , 'black' , 'green', 'yellow', 'blue', 'purple']:
 
 turtle.done
 
-'''
 
-'''
+
 for c in ['red', 'green', 'yellow', 'blue']:
-    t.color(c)
-    t.forward(75)
-    t.left(90)
-'''
+    larry.color(c)
+    larry.forward(75)
+    larry.left(90)
